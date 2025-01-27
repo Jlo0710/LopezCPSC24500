@@ -1,4 +1,3 @@
-n
-
-pineapple
 # LopezCPSC24500
+
+## pineapple
