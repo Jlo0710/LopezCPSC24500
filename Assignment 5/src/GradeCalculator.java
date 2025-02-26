@@ -4,12 +4,7 @@ import java.util.Scanner;
 public class GradeCalculator{
 
     // Creates a hashmap for grades
-    private HashMap<String, Integer>  grades;
-    
-        public GradeCalculator(){
-            grades = new HashMap<>();
-        intializesGrade();
-    }
+    private HashMap<String, Integer>  grades = new HashMap<String, Integer>();;
 
     // Creates the keys and values for the grades hashmap
     public void intializesGrade(){
