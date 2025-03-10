@@ -1,3 +1,5 @@
+package Assignment2.src;
+
 import java.util.Scanner;
 
 public class App {
@@ -31,5 +33,6 @@ public class App {
 
         // Print out the receipt
         System.out.println("One " + coffeeType + " " + sugarChoice + " coming right up, " + name + "!");
+        scan.close();
     }
 }
