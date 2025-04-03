@@ -51,14 +51,35 @@ class WFSimulator {
         logger = new FluidLogger();
     }
 
+    // Method that is going to start the simulation and gather the user input
     public void simulation(){
         System.out.println("Welcome to Spider-Man's Web Fluid Simulator!");
         System.out.println("In this simulator, you will be creating Spider-Man's web fluid, mix the right ingredients and create the perfect web fluid");
+
+        // Collects the user input for different components/chemicals of the web fluid
+        System.out.print("Enter main polymer (EX: Silk Compoud, Plastic Base, Rubber Matrix): ");
+        String polymer = scan.nextLine();
+        System.out.print("Enter adhesive agent (EX: Bio-Adhesive, Synthetic Glue, Resin Blend: ");
+        String adhesive = scan.nextLine();
+        System.out.print("Enter elasticity enhancer (EX: Flexium-12, Rubber Elastic, Stretch-X): ");
+        String enhancer = scan.nextLine();
+        System.out.print("Enter strengthing factor (EX: Titanium Fibers, Keblar Nanotubes, Carbon Weave): ");
+        String strengthener = scan.nextLine();
+        System.out.print("Enter durability factor (Ex: Nano Coating, Polyurethane Shield, UV Stabilizer): ");
+        String durability = scan.nextLine();
+        System.out.print("Enter special property (Ex: Fire Resistance, Electric Conductivity, Magnetic Response): ");
+        String specialProperty = scan.nextLine();
+        System.out.print("Enter viscocity level (0-100): ");
+        double viscocity = scan.nextDouble();
+        System.out.print("Enter tensile strength level (0-1000): ");
+        double tensileStrength = scan.nextDouble();
+
+        FluidSimulator fluidSimulator;
+
     }
 }
 
     public static void main(String[] args) throws Exception {
-        WFSimulator simu = new WFSimulator();
-        simu.simulation();
+        System.out.println("Hello, World!");
     }
 }
