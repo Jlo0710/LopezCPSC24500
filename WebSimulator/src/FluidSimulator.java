@@ -8,6 +8,8 @@ class FluidSimulator {
     private String strength;
     private String durability;
     private String specialProperty;
+    private double viscocity;
+    private double tensileStrength;
 
     // Constructor to initialize final web fluid properties
     public FluidSimulator(String consistency, String elasticity, String strength, String durability, String specialProperty){
@@ -16,6 +18,8 @@ class FluidSimulator {
         this.strength = strength;
         this.durability = durability;
         this.specialProperty = specialProperty; 
+        this.viscocity = viscocity;
+        this.tensileStrength = tensileStrength;
     }
 
     // Class that will log the web fluid history 
@@ -47,13 +51,14 @@ class WFSimulator {
         logger = new FluidLogger();
     }
 
-    // Method to start the simulation and gather user input
     public void simulation(){
-        
+        System.out.println("Welcome to Spider-Man's Web Fluid Simulator!");
+        System.out.println("In this simulator, you will be creating Spider-Man's web fluid, mix the right ingredients and create the perfect web fluid");
     }
 }
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        WFSimulator simu = new WFSimulator();
+        simu.simulation();
     }
 }
