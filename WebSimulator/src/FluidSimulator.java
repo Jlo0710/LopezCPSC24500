@@ -76,6 +76,23 @@ class WFSimulator {
 
         FluidSimulator fluidSimulator;
 
+        
+        // Checking to see if the selected ingredients match the perfect formula for the web fluid
+        if(polymer.equalsIgnoreCase("Silk Compound") && adhesive.equalsIgnoreCase("Bio-Adhesive")
+        && enhancer.equalsIgnoreCase("Flexium-12") && strengthener.equalsIgnoreCase("Kevlar Molecules")
+        && durability.equalsIgnoreCase("Nano Coating") && specialProperty.equalsIgnoreCase("Electric Conductivity")
+        && viscocity > 75.0 && tensileStrength > 500){
+            fluidSimulator = new FluidSimulator("Sticky", "High Elasticity", "Super Strong", "Long-Lasting", "Electric Conductivity", viscocity, tensileStrength);
+        }else{
+            // If the ingredients do not match well, assign default failed properties
+            fluidSimulator = new FluidSimulator("Watery", "Brittle", "Useless", "Insatntly dissolves", "Unsatble chemical structure", viscocity, tensileStrength);
+        }
+
+        // Log the web fluid creation
+        logger.log("Created web fluid with polymer: " + polymer + ", adhesive: " + adhesive + ", enhancer: " + ", strengthener: " + strengthener + ", durability: " + durability + ", special property: " + specialProperty + ", viscocity: " + viscocity + ", tensile strength: " + tensileStrength);
+
+        // Print the logs
+        logger.printLogs();
     }
 }
 
