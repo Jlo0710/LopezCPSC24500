@@ -91,12 +91,29 @@ class WFSimulator {
         // Log the web fluid creation
         logger.log("Created web fluid with polymer: " + polymer + ", adhesive: " + adhesive + ", enhancer: " + ", strengthener: " + strengthener + ", durability: " + durability + ", special property: " + specialProperty + ", viscocity: " + viscocity + ", tensile strength: " + tensileStrength);
 
+        // Test the web fluid creation
+        fluidSimulator.testWF();
+
         // Print the logs
         logger.printLogs();
     }
 }
-
+    public void testWF(){
+        if(consistency.equals("Sticky") &&
+        elasticity.equals("High Elasticity") &&
+        strength.equals("Super Strong") && 
+        durability.equals("Long-lasting") && 
+        specialProperty.equals("Electric Conductivity") &&
+        viscocity > 75.0 && tensileStrength > 500){
+            System.out.println("Success! Your web fluid is absolutely perfect: " + consistency + ", " + elasticity + ", " + strength + 
+            ", " + durability + ", " + specialProperty + ", Viscocity: " + viscocity + ", Tensile Strength: " + tensileStrength);
+    } else{
+        System.out.println("Your web fluid has issues! Report: " + consistency + ", " + elasticity + ", " + strength + ", " + durability + 
+        ", " + specialProperty + ", Viscocity: " + viscocity + ", Tensile Strength: " + tensileStrength);
+    }
+    }
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+       WFSimulator simulator = new WFSimulator();
+       simulator.simulation();
     }
 }
